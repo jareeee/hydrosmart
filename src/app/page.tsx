@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Droplets, Gauge, Activity, ShieldCheck, Cpu, Network, Zap, LineChart, Server, Lock, Bot, Database, Settings2 } from "lucide-react";
 import { ContactForm } from "@/components/landing/ContactForm";
 import { Feature } from "@/components/landing/Feature";
@@ -19,21 +20,13 @@ import { Step } from "@/components/landing/Step";
 export default function HydroSmartLanding() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      {/* ===== Top Ribbon ===== */}
-      <div className="w-full bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 text-white text-center text-xs sm:text-sm py-2">
-        <span className="font-medium">Pilot Program HydroSmart</span>
-        <span className="mx-2 opacity-60">•</span>
-        <span className="opacity-90">Pendinginan cair cerdas dengan analitik prediktif untuk pusat data</span>
-      </div>
-
       {/* ===== Navbar ===== */}
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 font-semibold">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-sky-500 to-blue-700 grid place-items-center text-white">
-              <Droplets className="w-4 h-4" />
+            <div className="relative h-20 w-20">
+              <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="40px" className="object-contain" />
             </div>
-            HydroSmart
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm">
             <a href="#fitur" className="hover:text-blue-700">Fitur</a>
@@ -164,10 +157,9 @@ export default function HydroSmartLanding() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-slate-600 grid md:grid-cols-2 gap-6">
           <div>
             <div className="flex items-center gap-2 font-semibold text-slate-800">
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-sky-500 to-blue-700 grid place-items-center text-white">
-                <Droplets className="w-4 h-4" />
+              <div className="relative h-20 w-20">
+                <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="40px" className="object-contain" />
               </div>
-              HydroSmart
             </div>
             <p className="mt-2 max-w-md">Platform pendinginan cair dengan kecerdasan prediktif untuk pusat data — menjaga stabilitas termal, menekan energi, dan meningkatkan valuasi aset.</p>
           </div>
