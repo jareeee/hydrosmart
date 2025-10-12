@@ -25,7 +25,7 @@ export default function HydroSmartLanding() {
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 font-semibold text-[#0a1433]">
             <div className="relative h-12 w-12">
-              <Image src="/logo.png" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
+              <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
             </div>
             HydroSmart
           </a>
@@ -63,10 +63,19 @@ export default function HydroSmartLanding() {
                 Hubungi Kami
               </a>
             </div>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-              <Stat icon={Zap} label="Hemat Energi" value="15–30%" />
-              <Stat icon={Gauge} label="Suhu Stabil" value="±1.0°C" />
-              <Stat icon={Activity} label="Respons Kontrol" value="&lt; 500 ms" />
+            <div className="mt-8 grid sm:grid-cols-3 gap-4 text-sm text-slate-600">
+              <div className="flex flex-col items-center rounded-2xl bg-[#eef2ff] px-6 py-6 text-center shadow-sm">
+                <Network className="w-6 h-6 text-[#3366ff]" aria-hidden />
+                <span className="mt-3 font-medium text-[#0a1433]">Integrasi WCU, VFD, katup IoT</span>
+              </div>
+              <div className="flex flex-col items-center rounded-2xl bg-[#eef2ff] px-6 py-6 text-center shadow-sm">
+                <Bot className="w-6 h-6 text-[#0a1433]" aria-hidden />
+                <span className="mt-3 font-medium text-[#0a1433]">Analitik prediktif—penentuan debit</span>
+              </div>
+              <div className="flex flex-col items-center rounded-2xl bg-[#eef2ff] px-6 py-6 text-center shadow-sm">
+                <Database className="w-6 h-6 text-[#3366ff]" aria-hidden />
+                <span className="mt-3 font-medium text-[#0a1433]">Historis &amp; dashboard real‑time</span>
+              </div>
             </div>
           </div>
 
@@ -81,11 +90,11 @@ export default function HydroSmartLanding() {
                 <p className="text-xs mt-2">Grafik suhu, debit, dan beban — contoh mockup</p>
               </div>
             </div>
-            <ul className="mt-6 grid sm:grid-cols-2 gap-2 text-sm text-slate-600">
-              <li className="flex items-center gap-2"><Network className="w-4 h-4 text-[#3366ff]"/> Integrasi WCU, VFD, katup IoT</li>
-              <li className="flex items-center gap-2"><Bot className="w-4 h-4 text-[#0a1433]"/> Analitik prediktif—penentuan debit</li>
-              <li className="flex items-center gap-2"><Database className="w-4 h-4 text-[#3366ff]"/> Historis &amp; dashboard real‑time</li>
-            </ul>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+              <Stat icon={Droplets} label="Hemat air hingga" value="35%" />
+              <Stat icon={Zap} label="Hemat energi hingga" value="40%" />
+              <Stat icon={Activity} label="Respons kontrol" value="&lt; 500 ms" />
+            </div>
           </div>
         </div>
       </section>
@@ -153,7 +162,7 @@ export default function HydroSmartLanding() {
           <div>
             <div className="flex items-center gap-3 font-semibold text-[#0a1433]">
               <div className="relative h-12 w-12">
-                <Image src="/logo.png" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
+                <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
               </div>
               HydroSmart
             </div>
