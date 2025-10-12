@@ -47,7 +47,7 @@ export default function HydroSmartLanding() {
         <div className="absolute -top-32 -right-48 w-[42rem] h-[42rem] rounded-full bg-gradient-to-br from-[#0a1433]/45 via-[#3366ff]/30 to-transparent blur-3xl opacity-80" aria-hidden />
         <div className="absolute top-64 -left-44 w-[32rem] h-[32rem] rounded-full bg-[#6a8bff]/35 blur-3xl opacity-70" aria-hidden />
         <div className="absolute top-[28rem] right-1/4 w-[28rem] h-[28rem] rounded-full bg-[#3366ff]/25 blur-3xl opacity-75" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
               Pendinginan Air dengan <span className="text-[#3366ff]">Intelijen Prediktif</span> untuk Pusat Data
@@ -57,10 +57,10 @@ export default function HydroSmartLanding() {
             </p>
             <div className="mt-6">
               <a
-                href="#contact"
+                href="#cara-kerja"
                 className="inline-flex items-center justify-center rounded-2xl bg-[#3366ff] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#0a1433] sm:text-base"
               >
-                Hubungi Kami
+                Pelajari HydroSmart
               </a>
             </div>
             <div className="mt-8 grid sm:grid-cols-3 gap-4 text-sm text-slate-600">
@@ -79,21 +79,23 @@ export default function HydroSmartLanding() {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl ring-1 ring-slate-200 p-6 lg:p-8">
-            <div className="mt-5 grid sm:grid-cols-2 gap-4">
-              <MiniCard title="Server Rack" subtitle="24 node" icon={Server} />
-              <MiniCard title="Debit Air" subtitle="120 LPM" icon={Droplets} />
-            </div>
-            <div className="mt-6">
-              <div className="h-44 rounded-2xl bg-gradient-to-tr from-[#eef2ff] to-[#cad6ff] grid place-items-center text-slate-500">
-                <LineChart className="w-6 h-6" />
-                <p className="text-xs mt-2">Grafik suhu, debit, dan beban — contoh mockup</p>
-              </div>
-            </div>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-              <Stat icon={Droplets} label="Hemat air hingga" value="35%" />
-              <Stat icon={Zap} label="Hemat energi hingga" value="40%" />
+          <div className="bg-white rounded-[2.5rem] shadow-[0_25px_60px_-30px_rgba(10,20,51,0.4)] ring-1 ring-[#d6ddff]/60 p-6 lg:p-10">
+            <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-3 lg:gap-6">
+              <Stat icon={Droplets} label="Hemat air" value="35%" />
+              <Stat icon={Zap} label="Hemat energi" value="40%" />
               <Stat icon={Activity} label="Respons kontrol" value="&lt; 500 ms" />
+            </div>
+            <div className="mt-8">
+              <div className="relative rounded-[2.25rem] bg-gradient-to-tr from-[#eef2ff] via-[#dde6ff] to-[#cbd8ff] px-6 py-6 lg:px-10 lg:py-10">
+                <div className="absolute inset-x-10 top-6 h-20 rounded-full bg-white/60 blur-3xl" aria-hidden />
+                <Image
+                  src="/table-dashboard.svg"
+                  alt="Tampilan dashboard HydroSmart"
+                  width={720}
+                  height={440}
+                  className="relative mx-auto w-full max-w-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
