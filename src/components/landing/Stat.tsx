@@ -12,7 +12,7 @@ export function Stat({ icon: Icon, label, value }: StatProps) {
       <div className="flex items-center gap-2 text-slate-500 text-xs">
         <Icon className="w-4 h-4" /> {label}
       </div>
-      <div className="mt-1 text-lg font-bold">{value}</div>
+      <div className="mt-1 text-lg font-bold text-[#0a1433]">{value}</div>
     </div>
   );
 }

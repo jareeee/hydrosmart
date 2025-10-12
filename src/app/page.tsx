@@ -19,77 +19,72 @@ import { Step } from "@/components/landing/Step";
 
 export default function HydroSmartLanding() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-[#f5f7ff] text-[#0a1433]">
       {/* ===== Navbar ===== */}
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 font-semibold">
-            <div className="relative h-20 w-20">
-              <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="40px" className="object-contain" />
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <a href="#" className="flex items-center gap-3 font-semibold text-[#0a1433]">
+            <div className="relative h-12 w-12">
+              <Image src="/logo.png" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
             </div>
+            HydroSmart
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#fitur" className="hover:text-blue-700">Fitur</a>
-            <a href="#cara-kerja" className="hover:text-blue-700">Cara Kerja</a>
-            <a href="#manfaat" className="hover:text-blue-700">Manfaat</a>
-            <a href="#stack" className="hover:text-blue-700">Stack</a>
-            <a href="#contact" className="hover:text-blue-700">Kontak</a>
+            <a href="#fitur" className="hover:text-[#3366ff]">Fitur</a>
+            <a href="#cara-kerja" className="hover:text-[#3366ff]">Cara Kerja</a>
+            <a href="#manfaat" className="hover:text-[#3366ff]">Manfaat</a>
+            <a href="#stack" className="hover:text-[#3366ff]">Stack</a>
+            <a href="#contact" className="hover:text-[#3366ff]">Kontak</a>
           </div>
           <div className="hidden sm:flex items-center gap-2">
-            <a href="#contact" className="px-3 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 text-sm font-medium">Hubungi Kami</a>
+            <a href="#contact" className="px-3 py-2 rounded-xl bg-[#3366ff] text-white hover:bg-[#0a1433] text-sm font-medium transition">Hubungi Kami</a>
           </div>
         </nav>
       </header>
 
       {/* ===== Hero ===== */}
       <section className="relative overflow-hidden">
-        <div className="absolute -top-32 -right-48 w-[42rem] h-[42rem] rounded-full bg-gradient-to-br from-sky-300/70 via-blue-200/50 to-transparent blur-3xl opacity-80" aria-hidden />
-        <div className="absolute top-64 -left-44 w-[32rem] h-[32rem] rounded-full bg-cyan-200/45 blur-3xl opacity-70" aria-hidden />
-        <div className="absolute top-[28rem] right-1/4 w-[28rem] h-[28rem] rounded-full bg-indigo-200/35 blur-3xl opacity-75" aria-hidden />
+        <div className="absolute -top-32 -right-48 w-[42rem] h-[42rem] rounded-full bg-gradient-to-br from-[#0a1433]/45 via-[#3366ff]/30 to-transparent blur-3xl opacity-80" aria-hidden />
+        <div className="absolute top-64 -left-44 w-[32rem] h-[32rem] rounded-full bg-[#6a8bff]/35 blur-3xl opacity-70" aria-hidden />
+        <div className="absolute top-[28rem] right-1/4 w-[28rem] h-[28rem] rounded-full bg-[#3366ff]/25 blur-3xl opacity-75" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              Pendinginan Air dengan <span className="text-blue-700">Intelijen Prediktif</span> untuk Pusat Data
+              Pendinginan Air dengan <span className="text-[#3366ff]">Intelijen Prediktif</span> untuk Pusat Data
             </h1>
             <p className="mt-4 text-slate-600 text-base sm:text-lg max-w-xl">
               HydroSmart memadukan telemetri suhu, beban komputasi, dan konsumsi daya untuk memprediksi kebutuhan termal secara real-time. Sistem otomatis menyesuaikan debit air melalui WCU &amp; VFD sehingga suhu terjaga, energi hemat hingga 30%, dan risiko downtime menurun drastis.
             </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="#contact" className="px-5 py-3 rounded-2xl bg-blue-600 text-white hover:bg-blue-700 font-semibold text-sm sm:text-base">Hubungi Kami</a>
-              <a href="#fitur" className="px-5 py-3 rounded-2xl border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm sm:text-base">Lihat Fitur</a>
+            <div className="mt-6">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center rounded-2xl bg-[#3366ff] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#0a1433] sm:text-base"
+              >
+                Hubungi Kami
+              </a>
             </div>
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
               <Stat icon={Zap} label="Hemat Energi" value="15–30%" />
               <Stat icon={Gauge} label="Suhu Stabil" value="±1.0°C" />
               <Stat icon={Activity} label="Respons Kontrol" value="&lt; 500 ms" />
-              <Stat icon={ShieldCheck} label="Keamanan" value="TLS + RBAC" />
             </div>
           </div>
 
           <div className="bg-white rounded-3xl shadow-xl ring-1 ring-slate-200 p-6 lg:p-8">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 text-slate-600">
-                <span className="w-2 h-2 bg-emerald-500 rounded-full" aria-hidden></span>
-                <span className="text-xs">Realtime link</span>
-              </div>
-              <span className="text-xs text-slate-500">API: MQTT/HTTP</span>
-            </div>
-            <div className="mt-5 grid sm:grid-cols-3 gap-4">
+            <div className="mt-5 grid sm:grid-cols-2 gap-4">
               <MiniCard title="Server Rack" subtitle="24 node" icon={Server} />
               <MiniCard title="Debit Air" subtitle="120 LPM" icon={Droplets} />
-              <MiniCard title="Load" subtitle="64% avg" icon={Cpu} />
             </div>
             <div className="mt-6">
-              <div className="h-44 rounded-2xl bg-gradient-to-tr from-sky-100 to-blue-100 grid place-items-center text-slate-500">
+              <div className="h-44 rounded-2xl bg-gradient-to-tr from-[#eef2ff] to-[#cad6ff] grid place-items-center text-slate-500">
                 <LineChart className="w-6 h-6" />
                 <p className="text-xs mt-2">Grafik suhu, debit, dan beban — contoh mockup</p>
               </div>
             </div>
             <ul className="mt-6 grid sm:grid-cols-2 gap-2 text-sm text-slate-600">
-              <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-600"/> TLS in‑transit • Audit log</li>
-              <li className="flex items-center gap-2"><Network className="w-4 h-4 text-blue-600"/> Integrasi WCU, VFD, katup IoT</li>
-              <li className="flex items-center gap-2"><Bot className="w-4 h-4 text-indigo-600"/> Analitik prediktif—penentuan debit</li>
-              <li className="flex items-center gap-2"><Database className="w-4 h-4 text-cyan-600"/> Historis &amp; dashboard real‑time</li>
+              <li className="flex items-center gap-2"><Network className="w-4 h-4 text-[#3366ff]"/> Integrasi WCU, VFD, katup IoT</li>
+              <li className="flex items-center gap-2"><Bot className="w-4 h-4 text-[#0a1433]"/> Analitik prediktif—penentuan debit</li>
+              <li className="flex items-center gap-2"><Database className="w-4 h-4 text-[#3366ff]"/> Historis &amp; dashboard real‑time</li>
             </ul>
           </div>
         </div>
@@ -128,9 +123,9 @@ export default function HydroSmartLanding() {
         </div>
       </section>
 
-      <section id="stack" className="bg-gradient-to-b from-slate-100 to-slate-50 border-t border-slate-200">
+      <section id="stack" className="bg-gradient-to-b from-[#eef2ff] to-[#f8f9ff] border-t border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-            <SectionHeader kicker="Stack" title="Teknologi & Integrasi" subtitle="Terbuka untuk otomasi industri maupun orkestrasi cloud Anda." />
+          <SectionHeader kicker="Stack" title="Teknologi & Integrasi" subtitle="Terbuka untuk otomasi industri maupun orkestrasi cloud Anda." />
           <div className="mt-8 grid md:grid-cols-3 gap-5">
             <StackCard title="API Service" items={["Go", "REST", "MQTT", "TLS"]} icon={Database} />
             <StackCard title="Front‑End" items={["React", "Tailwind", "WebSockets", "PWA"]} icon={LineChart} />
@@ -145,8 +140,8 @@ export default function HydroSmartLanding() {
             <h3 className="text-2xl font-bold">Siap bahas roadmap pendinginan & investasi?</h3>
             <p className="mt-3 text-slate-600">Tim HydroSmart membantu kajian kapasitas, menghitung ROI terukur, dan menyiapkan rencana implementasi bertahap bagi operator maupun investor infrastruktur.</p>
             <ul className="mt-4 text-sm text-slate-700 space-y-2">
-              <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-600"/> NDA dua arah untuk data teknis & rencana investasi</li>
-              <li className="flex items-center gap-2"><Zap className="w-4 h-4 text-yellow-600"/> Respons strategis dalam 1 hari kerja</li>
+              <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#0a1433]"/> NDA dua arah untuk data teknis & rencana investasi</li>
+              <li className="flex items-center gap-2"><Zap className="w-4 h-4 text-[#3366ff]"/> Respons strategis dalam 1 hari kerja</li>
             </ul>
           </div>
           <ContactForm />
@@ -156,27 +151,28 @@ export default function HydroSmartLanding() {
       <footer className="bg-white border-t border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-slate-600 grid md:grid-cols-2 gap-6">
           <div>
-            <div className="flex items-center gap-2 font-semibold text-slate-800">
-              <div className="relative h-20 w-20">
-                <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="40px" className="object-contain" />
+            <div className="flex items-center gap-3 font-semibold text-[#0a1433]">
+              <div className="relative h-12 w-12">
+                <Image src="/logo.png" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
               </div>
+              HydroSmart
             </div>
-            <p className="mt-2 max-w-md">Platform pendinginan cair dengan kecerdasan prediktif untuk pusat data — menjaga stabilitas termal, menekan energi, dan meningkatkan valuasi aset.</p>
+            <p className="mt-2 max-w-md text-[#0a1433]">Platform pendinginan cair dengan kecerdasan prediktif untuk pusat data — menjaga stabilitas termal, menekan energi, dan meningkatkan valuasi aset.</p>
           </div>
           <div className="flex md:justify-end items-start gap-8">
             <div>
               <div className="font-semibold text-slate-800">Tautan</div>
               <ul className="mt-2 space-y-1">
-                <li><a className="hover:text-blue-700" href="#fitur">Fitur</a></li>
-                <li><a className="hover:text-blue-700" href="#cara-kerja">Cara Kerja</a></li>
-                <li><a className="hover:text-blue-700" href="#contact">Kontak</a></li>
+                <li><a className="hover:text-[#3366ff]" href="#fitur">Fitur</a></li>
+                <li><a className="hover:text-[#3366ff]" href="#cara-kerja">Cara Kerja</a></li>
+                <li><a className="hover:text-[#3366ff]" href="#contact">Kontak</a></li>
               </ul>
             </div>
             <div>
               <div className="font-semibold text-slate-800">Kontak</div>
               <ul className="mt-2 space-y-1">
-                <li>Email: <a className="underline hover:text-blue-700" href="mailto:sales@hydrosmart.io">sales@hydrosmart.io</a></li>
-                <li>WA: <a className="underline hover:text-blue-700" href="https://wa.me/6281234567890">+62 812‑3456‑7890</a></li>
+                <li>Email: <a className="underline hover:text-[#3366ff]" href="mailto:sales@hydrosmart.io">sales@hydrosmart.io</a></li>
+                <li>WA: <a className="underline hover:text-[#3366ff]" href="https://wa.me/6281234567890">+62 812‑3456‑7890</a></li>
               </ul>
             </div>
           </div>
