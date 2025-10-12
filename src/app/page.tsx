@@ -12,7 +12,7 @@ import { Step } from "@/components/landing/Step";
  * HydroSmart — Single‑file brochure website
  * - React component, TailwindCSS styling
  * - Mobile‑first, responsive
- * - Anchor nav (Fitur, Cara Kerja, Manfaat, Stack, Demo)
+ * - Anchor nav (Fitur, Cara Kerja, Manfaat, Stack, Kontak)
  * - Replace placeholders (contacts, links, logos) as needed
  */
 
@@ -40,18 +40,19 @@ export default function HydroSmartLanding() {
             <a href="#cara-kerja" className="hover:text-blue-700">Cara Kerja</a>
             <a href="#manfaat" className="hover:text-blue-700">Manfaat</a>
             <a href="#stack" className="hover:text-blue-700">Stack</a>
-            <a href="#demo" className="hover:text-blue-700">Demo</a>
+            <a href="#contact" className="hover:text-blue-700">Kontak</a>
           </div>
           <div className="hidden sm:flex items-center gap-2">
-            <a href="#demo" className="px-3 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 text-sm font-medium">Lihat Demo</a>
+            <a href="#contact" className="px-3 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 text-sm font-medium">Hubungi Kami</a>
           </div>
         </nav>
       </header>
 
       {/* ===== Hero ===== */}
       <section className="relative overflow-hidden">
-        <div className="absolute -top-24 -right-40 w-[36rem] h-[36rem] rounded-full bg-blue-200/40 blur-3xl" aria-hidden />
-        <div className="absolute top-56 -left-32 w-[28rem] h-[28rem] rounded-full bg-cyan-200/40 blur-3xl" aria-hidden />
+        <div className="absolute -top-32 -right-48 w-[42rem] h-[42rem] rounded-full bg-gradient-to-br from-sky-300/70 via-blue-200/50 to-transparent blur-3xl opacity-80" aria-hidden />
+        <div className="absolute top-64 -left-44 w-[32rem] h-[32rem] rounded-full bg-cyan-200/45 blur-3xl opacity-70" aria-hidden />
+        <div className="absolute top-[28rem] right-1/4 w-[28rem] h-[28rem] rounded-full bg-indigo-200/35 blur-3xl opacity-75" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
@@ -61,7 +62,7 @@ export default function HydroSmartLanding() {
               HydroSmart memonitor suhu server, beban CPU/RAM, dan konsumsi daya untuk mengatur debit air secara otomatis via WCU &amp; VFD. Hasilnya: suhu stabil, konsumsi daya lebih hemat, operasi lebih aman.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="#demo" className="px-5 py-3 rounded-2xl bg-blue-600 text-white hover:bg-blue-700 font-semibold text-sm sm:text-base">Jadwalkan Demo</a>
+              <a href="#contact" className="px-5 py-3 rounded-2xl bg-blue-600 text-white hover:bg-blue-700 font-semibold text-sm sm:text-base">Hubungi Kami</a>
               <a href="#fitur" className="px-5 py-3 rounded-2xl border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm sm:text-base">Lihat Fitur</a>
             </div>
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
@@ -145,14 +146,14 @@ export default function HydroSmartLanding() {
         </div>
       </section>
 
-      <section id="demo" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <section id="contact" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 p-8 md:p-10 grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-bold">Ingin lihat HydroSmart beraksi?</h3>
-            <p className="mt-3 text-slate-600">Kami siapkan demo interaktif dan perhitungan estimasi penghematan berdasarkan data site Anda.</p>
+            <h3 className="text-2xl font-bold">Siap diskusi tentang HydroSmart?</h3>
+            <p className="mt-3 text-slate-600">Tim kami membantu analisis kebutuhan site Anda, menyiapkan estimasi ROI, dan rekomendasi integrasi.</p>
             <ul className="mt-4 text-sm text-slate-700 space-y-2">
-              <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-600"/> NDA tersedia</li>
-              <li className="flex items-center gap-2"><Zap className="w-4 h-4 text-yellow-600"/> Setup cepat (tanpa ganggu operasional)</li>
+              <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-600"/> NDA tersedia untuk data sensitif</li>
+              <li className="flex items-center gap-2"><Zap className="w-4 h-4 text-yellow-600"/> Respons cepat maksimal 1 hari kerja</li>
             </ul>
           </div>
           <ContactForm />
@@ -176,7 +177,7 @@ export default function HydroSmartLanding() {
               <ul className="mt-2 space-y-1">
                 <li><a className="hover:text-blue-700" href="#fitur">Fitur</a></li>
                 <li><a className="hover:text-blue-700" href="#cara-kerja">Cara Kerja</a></li>
-                <li><a className="hover:text-blue-700" href="#demo">Demo</a></li>
+                <li><a className="hover:text-blue-700" href="#contact">Kontak</a></li>
               </ul>
             </div>
             <div>
@@ -192,3 +193,4 @@ export default function HydroSmartLanding() {
       </footer>
     </div>
   );
+}
