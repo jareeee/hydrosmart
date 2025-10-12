@@ -21,9 +21,9 @@ export default function HydroSmartLanding() {
     <div className="min-h-screen bg-slate-50 text-slate-900">
       {/* ===== Top Ribbon ===== */}
       <div className="w-full bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 text-white text-center text-xs sm:text-sm py-2">
-        <span className="font-medium">Prototype by HydroSmart Team</span>
+        <span className="font-medium">Pilot Program HydroSmart</span>
         <span className="mx-2 opacity-60">•</span>
-        <span className="opacity-90">AI‑driven water cooling for data centers</span>
+        <span className="opacity-90">Pendinginan cair cerdas dengan analitik prediktif untuk pusat data</span>
       </div>
 
       {/* ===== Navbar ===== */}
@@ -56,10 +56,10 @@ export default function HydroSmartLanding() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              Optimasi Pendinginan <span className="text-blue-700">Air berbasis AI</span> untuk Pusat Data
+              Pendinginan Air dengan <span className="text-blue-700">Intelijen Prediktif</span> untuk Pusat Data
             </h1>
             <p className="mt-4 text-slate-600 text-base sm:text-lg max-w-xl">
-              HydroSmart memonitor suhu server, beban CPU/RAM, dan konsumsi daya untuk mengatur debit air secara otomatis via WCU &amp; VFD. Hasilnya: suhu stabil, konsumsi daya lebih hemat, operasi lebih aman.
+              HydroSmart memadukan telemetri suhu, beban komputasi, dan konsumsi daya untuk memprediksi kebutuhan termal secara real-time. Sistem otomatis menyesuaikan debit air melalui WCU &amp; VFD sehingga suhu terjaga, energi hemat hingga 30%, dan risiko downtime menurun drastis.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <a href="#contact" className="px-5 py-3 rounded-2xl bg-blue-600 text-white hover:bg-blue-700 font-semibold text-sm sm:text-base">Hubungi Kami</a>
@@ -95,7 +95,7 @@ export default function HydroSmartLanding() {
             <ul className="mt-6 grid sm:grid-cols-2 gap-2 text-sm text-slate-600">
               <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-600"/> TLS in‑transit • Audit log</li>
               <li className="flex items-center gap-2"><Network className="w-4 h-4 text-blue-600"/> Integrasi WCU, VFD, katup IoT</li>
-              <li className="flex items-center gap-2"><Bot className="w-4 h-4 text-indigo-600"/> Analitik AI—penentuan debit</li>
+              <li className="flex items-center gap-2"><Bot className="w-4 h-4 text-indigo-600"/> Analitik prediktif—penentuan debit</li>
               <li className="flex items-center gap-2"><Database className="w-4 h-4 text-cyan-600"/> Historis &amp; dashboard real‑time</li>
             </ul>
           </div>
@@ -103,7 +103,7 @@ export default function HydroSmartLanding() {
       </section>
 
       <section id="fitur" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <SectionHeader kicker="Fitur" title="Yang kamu dapatkan" subtitle="Fokus pada efisiensi, stabilitas, dan kemudahan integrasi." />
+        <SectionHeader kicker="Fitur" title="Solusi yang Anda peroleh" subtitle="Dirancang untuk menekan capex/opex sekaligus menjaga ketersediaan layanan." />
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           <Feature icon={Gauge} title="Kontrol Debit Dinamis" desc="VFD menyesuaikan kecepatan pompa sesuai beban server — bukan sekadar ON/OFF." />
           <Feature icon={Droplets} title="Katup per‑Rak" desc="Katup IoT membuka/menutup otomatis per‑jalur agar distribusi air optimal." />
@@ -116,18 +116,18 @@ export default function HydroSmartLanding() {
 
       <section id="cara-kerja" className="bg-white border-y border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-          <SectionHeader kicker="Cara Kerja" title="Empat langkah sederhana" subtitle="Dari sensor ke aksi — tertutup dengan umpan balik." />
+          <SectionHeader kicker="Cara Kerja" title="Arsitektur kendali tertutup" subtitle="Sensor, analitik, dan aktuasi bekerja serempak menjaga performa termal." />
           <ol className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Step no={1} icon={Activity} title="Monitor" desc="Agent di server membaca suhu, CPU/RAM, & daya; kirim ke API." />
-            <Step no={2} icon={Bot} title="Analitik AI" desc="Model menghitung kebutuhan debit optimal per‑jalur." />
-            <Step no={3} icon={Network} title="Kontrol" desc="API mengatur WCU, VFD, dan katup IoT melalui MQTT/HTTP." />
-            <Step no={4} icon={Lock} title="Umpan Balik" desc="Status perangkat & metrik tercatat; alarm jika anomali." />
+            <Step no={1} icon={Activity} title="Monitor" desc="Agent membaca suhu, CPU/RAM, dan daya lalu mengirim telemetri terenkripsi ke API." />
+            <Step no={2} icon={Bot} title="Analitik Prediktif" desc="Model menghitung debit optimal per jalur berdasarkan tren beban & risiko termal." />
+            <Step no={3} icon={Network} title="Kontrol" desc="API mengatur WCU, VFD, dan katup IoT melalui MQTT/HTTP secara presisi." />
+            <Step no={4} icon={Lock} title="Umpan Balik" desc="Status perangkat dan metrik tervalidasi; alarm otomatis bila ada penyimpangan." />
           </ol>
         </div>
       </section>
 
       <section id="manfaat" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <SectionHeader kicker="Manfaat" title="Dampak yang terukur" subtitle="Sesuaikan angka berdasarkan uji lapangan Anda." />
+        <SectionHeader kicker="Manfaat" title="Dampak yang terukur" subtitle="Angka berasal dari proyek pilot — siap dikalibrasi dengan data site Anda." />
         <div className="mt-8 grid md:grid-cols-3 gap-5">
           <Outcome title="Penghematan Energi" value="15–30%" desc="Optimasi debit via VFD mengurangi beban listrik pompa." />
           <Outcome title="Suhu Lebih Stabil" value="±1.0°C" desc="Adaptasi terhadap beban kerja mencegah over‑/under‑cooling." />
@@ -137,7 +137,7 @@ export default function HydroSmartLanding() {
 
       <section id="stack" className="bg-gradient-to-b from-slate-100 to-slate-50 border-t border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-          <SectionHeader kicker="Stack" title="Teknologi & Integrasi" subtitle="Siap integrasi dengan infrastruktur Anda." />
+            <SectionHeader kicker="Stack" title="Teknologi & Integrasi" subtitle="Terbuka untuk otomasi industri maupun orkestrasi cloud Anda." />
           <div className="mt-8 grid md:grid-cols-3 gap-5">
             <StackCard title="API Service" items={["Go", "REST", "MQTT", "TLS"]} icon={Database} />
             <StackCard title="Front‑End" items={["React", "Tailwind", "WebSockets", "PWA"]} icon={LineChart} />
@@ -149,11 +149,11 @@ export default function HydroSmartLanding() {
       <section id="contact" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 p-8 md:p-10 grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-bold">Siap diskusi tentang HydroSmart?</h3>
-            <p className="mt-3 text-slate-600">Tim kami membantu analisis kebutuhan site Anda, menyiapkan estimasi ROI, dan rekomendasi integrasi.</p>
+            <h3 className="text-2xl font-bold">Siap bahas roadmap pendinginan & investasi?</h3>
+            <p className="mt-3 text-slate-600">Tim HydroSmart membantu kajian kapasitas, menghitung ROI terukur, dan menyiapkan rencana implementasi bertahap bagi operator maupun investor infrastruktur.</p>
             <ul className="mt-4 text-sm text-slate-700 space-y-2">
-              <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-600"/> NDA tersedia untuk data sensitif</li>
-              <li className="flex items-center gap-2"><Zap className="w-4 h-4 text-yellow-600"/> Respons cepat maksimal 1 hari kerja</li>
+              <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-600"/> NDA dua arah untuk data teknis & rencana investasi</li>
+              <li className="flex items-center gap-2"><Zap className="w-4 h-4 text-yellow-600"/> Respons strategis dalam 1 hari kerja</li>
             </ul>
           </div>
           <ContactForm />
@@ -169,7 +169,7 @@ export default function HydroSmartLanding() {
               </div>
               HydroSmart
             </div>
-            <p className="mt-2 max-w-md">Sistem pendinginan air berbasis AI untuk pusat data: stabil, hemat energi, dan aman.</p>
+            <p className="mt-2 max-w-md">Platform pendinginan cair dengan kecerdasan prediktif untuk pusat data — menjaga stabilitas termal, menekan energi, dan meningkatkan valuasi aset.</p>
           </div>
           <div className="flex md:justify-end items-start gap-8">
             <div>
