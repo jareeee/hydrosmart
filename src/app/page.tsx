@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import { Droplets, Gauge, Activity, ShieldCheck, Cpu, Network, Zap, LineChart, Server, Lock, Bot, Database, Settings2 } from "lucide-react";
+import { useState } from "react";
+import { Droplets, Gauge, Activity, ShieldCheck, Cpu, Network, Zap, LineChart, Server, Lock, Bot, Database, Settings2, Menu, X } from "lucide-react";
 import { ContactForm } from "@/components/landing/ContactForm";
 import { Feature } from "@/components/landing/Feature";
 import { MiniCard } from "@/components/landing/MiniCard";
@@ -18,11 +21,13 @@ import { Step } from "@/components/landing/Step";
  */
 
 export default function HydroSmartLanding() {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#f5f7ff] text-[#0a1433]">
       {/* ===== Navbar ===== */}
-      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur">
+        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <a href="#" className="flex items-center gap-3 font-semibold text-[#0a1433]">
             <div className="relative h-20 w-20">
               <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
@@ -35,10 +40,33 @@ export default function HydroSmartLanding() {
             <a href="#stack" className="hover:text-[#3366ff]">Stack</a>
             <a href="#contact" className="hover:text-[#3366ff]">Kontak</a>
           </div>
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="hidden items-center gap-2 md:flex">
             <a href="#contact" className="px-3 py-2 rounded-xl bg-[#3366ff] text-white hover:bg-[#0a1433] text-sm font-medium transition">Hubungi Kami</a>
           </div>
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-xl border border-slate-200 p-2 text-[#0a1433] transition hover:border-[#3366ff] hover:text-[#3366ff] md:hidden"
+            onClick={() => setIsMobileNavOpen((prev) => !prev)}
+            aria-expanded={isMobileNavOpen}
+            aria-controls="mobile-nav"
+            aria-label="Toggle navigation"
+          >
+            {isMobileNavOpen ? <X className="h-5 w-5" aria-hidden /> : <Menu className="h-5 w-5" aria-hidden />}
+          </button>
         </nav>
+        <div
+          id="mobile-nav"
+          className={`md:hidden overflow-hidden bg-white transition-[max-height,opacity,transform] duration-300 ease-in-out ${isMobileNavOpen ? "max-h-80 border-b border-slate-200 opacity-100 translate-y-0" : "pointer-events-none max-h-0 -translate-y-2 opacity-0"}`}
+          aria-hidden={!isMobileNavOpen}
+        >
+          <div className="space-y-4 px-4 pb-6 pt-4 text-sm text-[#0a1433]">
+            <a onClick={() => setIsMobileNavOpen(false)} href="#fitur" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Fitur</a>
+            <a onClick={() => setIsMobileNavOpen(false)} href="#cara-kerja" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Cara Kerja</a>
+            <a onClick={() => setIsMobileNavOpen(false)} href="#manfaat" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Manfaat</a>
+            <a onClick={() => setIsMobileNavOpen(false)} href="#stack" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Stack</a>
+            <a onClick={() => setIsMobileNavOpen(false)} href="#contact" className="block rounded-xl bg-[#3366ff] px-4 py-3 text-center font-semibold text-white hover:bg-[#0a1433]">Hubungi Kami</a>
+          </div>
+        </div>
       </header>
 
       {/* ===== Hero ===== */}
