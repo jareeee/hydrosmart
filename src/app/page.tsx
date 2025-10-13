@@ -209,8 +209,8 @@ export default function HydroSmartLanding() {
             <div>
               <div className="font-semibold text-slate-800">Kontak</div>
               <ul className="mt-2 space-y-1">
-                <li>Email: <a className="underline hover:text-[#3366ff]" href="mailto:sales@hydrosmart.io">sales@hydrosmart.io</a></li>
-                <li>WA: <a className="underline hover:text-[#3366ff]" href="https://wa.me/6281234567890">+62 812‑3456‑7890</a></li>
+                <li>Email: <a className="underline hover:text-[#3366ff]" href="mailto:ceo@hydrosmart.pro">ceo@hydrosmart.pro</a></li>
+                <li>WA: <a className="underline hover:text-[#3366ff]" href="https://wa.me/6287886863438">+6287886863438</a></li>
               </ul>
             </div>
           </div>

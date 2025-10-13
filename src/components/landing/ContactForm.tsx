@@ -38,8 +38,8 @@ export function ContactForm() {
       </button>
       <p className="text-xs text-slate-500">
         Atau hubungi langsung:{" "}
-        <a className="underline hover:text-[#3366ff]" href="mailto:sales@hydrosmart.io">
-          sales@hydrosmart.io
+        <a className="underline hover:text-[#3366ff]" href="mailto:ceo@hydrosmart.pro">
+          ceo@hydrosmart.pro
         </a>
       </p>
     </form>
