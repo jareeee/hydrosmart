@@ -42,17 +42,19 @@ export default function HydroSmartLanding() {
       </header>
 
       {/* ===== Hero ===== */}
-      <section className="relative overflow-hidden">
-        <div className="absolute -top-32 -right-48 w-[42rem] h-[42rem] rounded-full bg-gradient-to-br from-[#0a1433]/45 via-[#3366ff]/30 to-transparent blur-3xl opacity-80" aria-hidden />
-        <div className="absolute top-64 -left-44 w-[32rem] h-[32rem] rounded-full bg-[#6a8bff]/35 blur-3xl opacity-70" aria-hidden />
-        <div className="absolute top-[28rem] right-1/4 w-[28rem] h-[28rem] rounded-full bg-[#3366ff]/25 blur-3xl opacity-75" aria-hidden />
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#eef2ff] via-[#f1f4ff] to-[#f5f7ff]">
+        <div className="absolute inset-x-6 -top-24 h-48 rounded-full bg-[#cdd7ff]/70 blur-[110px] md:hidden" aria-hidden />
+        <div className="absolute inset-x-12 top-64 h-56 rounded-full bg-[#d9e2ff]/70 blur-[120px] md:hidden" aria-hidden />
+        <div className="absolute -top-32 -right-48 hidden h-[42rem] w-[42rem] rounded-full bg-gradient-to-br from-[#0a1433]/45 via-[#3366ff]/30 to-transparent blur-3xl opacity-80 md:block" aria-hidden />
+        <div className="absolute top-64 -left-44 hidden h-[32rem] w-[32rem] rounded-full bg-[#6a8bff]/35 blur-3xl opacity-70 md:block" aria-hidden />
+        <div className="absolute top-[28rem] right-1/4 hidden h-[28rem] w-[28rem] rounded-full bg-[#3366ff]/25 blur-3xl opacity-75 md:block" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              Pendinginan Air dengan <span className="text-[#3366ff]">Intelijen Prediktif</span> untuk Pusat Data
+              AI &amp; IoT Untuk Efisiensi Pendinginan Air Pada Chip AI
             </h1>
             <p className="mt-4 text-slate-600 text-base sm:text-lg max-w-xl">
-              HydroSmart memadukan telemetri suhu, beban komputasi, dan konsumsi daya untuk memprediksi kebutuhan termal secara real-time. Sistem otomatis menyesuaikan debit air melalui WCU &amp; VFD sehingga suhu terjaga, energi hemat hingga 30%, dan risiko downtime menurun drastis.
+              HydroSmart adalah sistem pendinginan cerdas berbasis IoT dan AI yang dirancang untuk mengoptimalkan penggunaan air pada data center. Melalui sensor suhu dan katup pintar, HydroSmart menyalurkan air hanya ke rak server yang membutuhkan pendinginan secara real-time.
             </p>
             <div className="mt-6">
               <a
@@ -69,20 +71,19 @@ export default function HydroSmartLanding() {
               </div>
               <div className="flex flex-col items-center rounded-2xl bg-[#eef2ff] px-6 py-6 text-center shadow-sm">
                 <Bot className="w-6 h-6 text-[#0a1433]" aria-hidden />
-                <span className="mt-3 font-medium text-[#0a1433]">Analitik prediktif—penentuan debit</span>
+                <span className="mt-3 font-medium text-[#0a1433]">Analitik prediktif untuk penentuan debit</span>
               </div>
               <div className="flex flex-col items-center rounded-2xl bg-[#eef2ff] px-6 py-6 text-center shadow-sm">
                 <Database className="w-6 h-6 text-[#3366ff]" aria-hidden />
-                <span className="mt-3 font-medium text-[#0a1433]">Historis &amp; dashboard real‑time</span>
+                <span className="mt-3 font-medium text-[#0a1433]">Historis &amp; dashboard real-time</span>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-[2.5rem] shadow-[0_25px_60px_-30px_rgba(10,20,51,0.4)] ring-1 ring-[#d6ddff]/60 p-6 lg:p-10">
-            <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-3 lg:gap-6">
-              <Stat icon={Droplets} label="Hemat air" value="35%" />
-              <Stat icon={Zap} label="Hemat energi" value="40%" />
-              <Stat icon={Activity} label="Respons kontrol" value="&lt; 500 ms" />
+          <div className="bg-white rounded-[2.5rem] shadow-[0_25px_60px_-30px_rgba(10,20,51,0.4)] ring-1 ring-[#d6ddff]/60 lg:p-10">
+            <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-2 lg:gap-6">
+              <Stat icon={Droplets} label="Hemat air hingga" value="35%" />
+              <Stat icon={Zap} label="Hemat energi hingga" value="40%" />
             </div>
             <div className="mt-8">
               <div className="relative rounded-[2.25rem] bg-gradient-to-tr from-[#eef2ff] via-[#dde6ff] to-[#cbd8ff] px-6 py-6 lg:px-10 lg:py-10">
