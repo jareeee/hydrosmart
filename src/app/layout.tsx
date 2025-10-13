@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "HydroSmart | Pendinginan Air Berbasis AI",
   description:
     "HydroSmart mengoptimalkan pendinginan air untuk pusat data dengan monitoring real-time, analitik AI, serta integrasi perangkat industri.",
+  icons: {
+    icon: "/icon.ico",
+  },
 };
 
 export default function RootLayout({
