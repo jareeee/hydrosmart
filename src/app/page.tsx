@@ -2,11 +2,9 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Droplets, Gauge, Activity, ShieldCheck, Cpu, Network, Zap, LineChart, Server, Lock, Bot, Database, Settings2, Menu, X } from "lucide-react";
-import { ContactForm } from "@/components/landing/ContactForm";
+import type { LucideProps } from "lucide-react";
+import { Droplets, Gauge, Activity, ShieldCheck, Network, Zap, LineChart, Lock, Bot, Database, Menu, X, Phone, Mail } from "lucide-react";
 import { Feature } from "@/components/landing/Feature";
-import { MiniCard } from "@/components/landing/MiniCard";
-import { Outcome } from "@/components/landing/Outcome";
 import { SectionHeader } from "@/components/landing/SectionHeader";
 import { StackCard } from "@/components/landing/StackCard";
 import { Stat } from "@/components/landing/Stat";
@@ -16,9 +14,29 @@ import { Step } from "@/components/landing/Step";
  * HydroSmart — Single‑file brochure website
  * - React component, TailwindCSS styling
  * - Mobile‑first, responsive
- * - Anchor nav (Fitur, Cara Kerja, Manfaat, Stack, Kontak)
+ * - Anchor nav (Fitur, Cara Kerja, Metrik, Teknologi, Kontak)
  * - Replace placeholders (contacts, links, logos) as needed
  */
+
+const ValveIcon = (props: LucideProps) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <circle cx="12" cy="12" r="3" />
+    <path d="M12 5v4" />
+    <path d="M12 15v4" />
+    <path d="M5 12h4" />
+    <path d="M15 12h4" />
+  </svg>
+);
 
 export default function HydroSmartLanding() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -36,8 +54,8 @@ export default function HydroSmartLanding() {
           <div className="hidden md:flex items-center gap-6 text-sm">
             <a href="#fitur" className="hover:text-[#3366ff]">Fitur</a>
             <a href="#cara-kerja" className="hover:text-[#3366ff]">Cara Kerja</a>
-            <a href="#manfaat" className="hover:text-[#3366ff]">Manfaat</a>
-            <a href="#stack" className="hover:text-[#3366ff]">Stack</a>
+            <a href="#metrik" className="hover:text-[#3366ff]">Metrik</a>
+            <a href="#teknologi" className="hover:text-[#3366ff]">Teknologi</a>
             <a href="#contact" className="hover:text-[#3366ff]">Kontak</a>
           </div>
           <div className="hidden items-center gap-2 md:flex">
@@ -62,8 +80,8 @@ export default function HydroSmartLanding() {
           <div className="space-y-4 px-4 pb-6 pt-4 text-sm text-[#0a1433]">
             <a onClick={() => setIsMobileNavOpen(false)} href="#fitur" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Fitur</a>
             <a onClick={() => setIsMobileNavOpen(false)} href="#cara-kerja" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Cara Kerja</a>
-            <a onClick={() => setIsMobileNavOpen(false)} href="#manfaat" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Manfaat</a>
-            <a onClick={() => setIsMobileNavOpen(false)} href="#stack" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Stack</a>
+            <a onClick={() => setIsMobileNavOpen(false)} href="#metrik" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Metrik</a>
+            <a onClick={() => setIsMobileNavOpen(false)} href="#teknologi" className="block rounded-xl bg-[#eef2ff] px-4 py-3 font-medium hover:bg-[#dbe4ff]">Teknologi</a>
             <a onClick={() => setIsMobileNavOpen(false)} href="#contact" className="block rounded-xl bg-[#3366ff] px-4 py-3 text-center font-semibold text-white hover:bg-[#0a1433]">Hubungi Kami</a>
           </div>
         </div>
@@ -82,7 +100,7 @@ export default function HydroSmartLanding() {
               AI &amp; IoT Untuk Efisiensi Pendinginan Air Pada Chip AI
             </h1>
             <p className="mt-4 text-slate-600 text-base sm:text-lg max-w-xl">
-              HydroSmart adalah sistem pendinginan cerdas berbasis IoT dan AI yang dirancang untuk mengoptimalkan penggunaan air pada data center. Melalui sensor suhu dan katup pintar, HydroSmart menyalurkan air hanya ke rak server yang membutuhkan pendinginan secara real-time.
+              Melalui sensor suhu dan katup pintar, HydroSmart menyalurkan air hanya ke rak server yang membutuhkan pendinginan secara real-time.
             </p>
             <div className="mt-6">
               <a
@@ -130,14 +148,12 @@ export default function HydroSmartLanding() {
       </section>
 
       <section id="fitur" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <SectionHeader kicker="Fitur" title="Solusi yang Anda peroleh" subtitle="Dirancang untuk menekan capex/opex sekaligus menjaga ketersediaan layanan." />
-        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          <Feature icon={Gauge} title="Kontrol Debit Dinamis" desc="VFD menyesuaikan kecepatan pompa sesuai beban server — bukan sekadar ON/OFF." />
-          <Feature icon={Droplets} title="Katup per‑Rak" desc="Katup IoT membuka/menutup otomatis per‑jalur agar distribusi air optimal." />
-          <Feature icon={Cpu} title="Monitoring 24/7" desc="Agent membaca suhu, CPU/RAM, dan daya — dikirim ke API secara real‑time." />
+        <SectionHeader kicker="Fitur" title="Solusi yang Anda peroleh" subtitle="Optimalkan operasional untuk keberlanjutan bisnis tanpa memangkas kualitas" />
+        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <Feature icon={Gauge} title="Kontrol Debit Dinamis" desc="Teknologi penyesuaian debit air berdasarkan beban server" />
+          <Feature icon={ValveIcon} title="Katup per-Rak" desc="Katup IoT membuka/menutup otomatis per-jalur agar distribusi air optimal." />
+          <Feature icon={Bot} title="AI Terintegrasi" desc="Prediksi load pada server untuk mengatur mekanisme katup" />
           <Feature icon={LineChart} title="Dashboard Real‑time" desc="Grafik suhu, debit, alarm, dan historis untuk audit & optimasi." />
-          <Feature icon={Settings2} title="API Terbuka" desc="HTTP/MQTT, mudah diintegrasikan ke sistem BMS/DCIM dan SCADA." />
-          <Feature icon={ShieldCheck} title="Keamanan Enterprise" desc="TLS, RBAC, rate limiting, dan audit trail." />
         </div>
       </section>
 
@@ -153,18 +169,93 @@ export default function HydroSmartLanding() {
         </div>
       </section>
 
-      <section id="manfaat" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <SectionHeader kicker="Manfaat" title="Dampak yang terukur" subtitle="Angka berasal dari proyek pilot — siap dikalibrasi dengan data site Anda." />
-        <div className="mt-8 grid md:grid-cols-3 gap-5">
-          <Outcome title="Penghematan Energi" value="15–30%" desc="Optimasi debit via VFD mengurangi beban listrik pompa." />
-          <Outcome title="Suhu Lebih Stabil" value="±1.0°C" desc="Adaptasi terhadap beban kerja mencegah over‑/under‑cooling." />
-          <Outcome title="Waktu Pemulihan" value="&lt; 5 menit" desc="Dari alarm ke stabil kembali pada beban normal." />
+      <section id="metrik" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+        <SectionHeader kicker="Metrik" title="Dampak dalam angka" subtitle="Penurunan konsumsi harian pendinginan dengan membandingkan sistem pendingin konvensional (open-loop evaporative cooling)*" />
+        <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] text-center">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="space-y-6">
+              <p className="text-sm text-slate-600">Algoritma prediktif meminimalkan pendinginan tidak perlu.</p>
+              <div className="flex flex-col gap-4">
+                <div className="rounded-2xl border border-slate-200 bg-white px-6 py-5 shadow-sm">
+                  <div className="flex items-center gap-3">
+                    <Droplets className="h-6 w-6 text-[#3366ff]" aria-hidden />
+                    <div>
+                      <p className="text-2xl font-semibold text-[#0a1433]">1.920 L</p>
+                      <p className="text-xs uppercase tracking-wide text-slate-500">per hari</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-center pl-2">
+                  <div
+                    className="inline-flex h-16 min-w-[4.5rem] items-end justify-end px-6 pb-3 text-sm font-semibold text-white shadow-md"
+                    style={{ backgroundColor: "#0a1433", clipPath: "polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)" }}
+                  >
+                    35%*
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-[#0a1433] bg-[#0a1433] px-6 py-5 text-white shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <Droplets className="h-6 w-6 text-white" aria-hidden />
+                    <div>
+                      <p className="text-2xl font-semibold">1.248 L</p>
+                      <p className="text-xs uppercase tracking-wide text-slate-200">per hari</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <p className="text-sm text-slate-600"><span className="italic">Load balancing</span> memastikan pendinginan bekerja dinamis.</p>
+              <div className="flex flex-col gap-4">
+                <div className="rounded-2xl border border-slate-200 bg-white px-6 py-5 shadow-sm">
+                  <div className="flex items-center gap-3">
+                    <Zap className="h-6 w-6 text-[#3366ff]" aria-hidden />
+                    <div>
+                      <p className="text-2xl font-semibold text-[#0a1433]">384 kWh</p>
+                      <p className="text-xs uppercase tracking-wide text-slate-500">per hari</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-center pl-2">
+                  <div
+                    className="inline-flex h-16 min-w-[4.5rem] items-end justify-end px-6 pb-3 text-sm font-semibold text-white shadow-md"
+                    style={{ backgroundColor: "#3366ff", clipPath: "polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)" }}
+                  >
+                    40%*
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-[#3366ff] bg-[#3366ff] px-6 py-5 text-white shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <Zap className="h-6 w-6 text-white" aria-hidden />
+                    <div>
+                      <p className="text-2xl font-semibold">230 kWh</p>
+                      <p className="text-xs uppercase tracking-wide text-slate-200">per hari</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="space-y-6">
+            <div className="rounded-3xl bg-[#0a1433] px-6 py-7 text-white shadow-xl">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#8fa4ff]">Penghematan Air</p>
+              <p className="mt-4 text-2xl font-bold leading-snug">12,2 Juta L/tahun</p>
+              <p className="mt-1 text-sm text-slate-200">Air bersih yang dapat dialihkan.</p>
+            </div>
+            <div className="rounded-3xl bg-[#3366ff] px-6 py-7 text-white shadow-xl">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#dbe4ff]">Efisiensi Biaya Operasional</p>
+              <p className="mt-4 text-2xl font-bold leading-snug">Rp 4,9 Miliar / Tahun</p>
+              <p className="mt-1 text-sm text-slate-100">Hasil simulasi untuk 50 rak pendinginan cair.</p>
+            </div>
+            <p className="text-xs text-slate-500">Proyeksi pada skala besar untuk 50 rak data center.</p>
+          </div>
         </div>
+        <p className="mt-6 text-xs text-slate-500">*Target Proyeksi&nbsp;&nbsp;**Estimasi dari data berdasarkan data yang diolah dengan metode prediktif dari Hugging Face (2025)</p>
       </section>
 
-      <section id="stack" className="bg-gradient-to-b from-[#eef2ff] to-[#f8f9ff] border-t border-slate-200">
+      <section id="teknologi" className="bg-gradient-to-b from-[#eef2ff] to-[#f8f9ff] border-t border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-          <SectionHeader kicker="Stack" title="Teknologi & Integrasi" subtitle="Terbuka untuk otomasi industri maupun orkestrasi cloud Anda." />
+          <SectionHeader kicker="Teknologi" title="Teknologi & Integrasi" subtitle="Teknologi menyesuaikan dengan standar industri yang dapat di andalkan." />
           <div className="mt-8 grid md:grid-cols-3 gap-5">
             <StackCard title="API Service" items={["Go", "REST", "MQTT", "TLS"]} icon={Database} />
             <StackCard title="Front‑End" items={["React", "Tailwind", "WebSockets", "PWA"]} icon={LineChart} />
@@ -174,29 +265,43 @@ export default function HydroSmartLanding() {
       </section>
 
       <section id="contact" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 p-8 md:p-10 grid lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 className="text-2xl font-bold">Siap bahas roadmap pendinginan & investasi?</h3>
-            <p className="mt-3 text-slate-600">Tim HydroSmart membantu kajian kapasitas, menghitung ROI terukur, dan menyiapkan rencana implementasi bertahap bagi operator maupun investor infrastruktur.</p>
-            <ul className="mt-4 text-sm text-slate-700 space-y-2">
-              <li className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#0a1433]"/> NDA dua arah untuk data teknis & rencana investasi</li>
-              <li className="flex items-center gap-2"><Zap className="w-4 h-4 text-[#3366ff]"/> Respons strategis dalam 1 hari kerja</li>
+        <div className="rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 p-8 md:p-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-lg space-y-4">
+            <h3 className="text-2xl font-bold text-[#0a1433]">Siap bahas roadmap pendinginan & investasi?</h3>
+            <p className="text-slate-600">HydroSmart, menjadikan AI berkelanjutan tanpa mengorbankan air.</p>
+            <ul className="text-sm text-slate-700 space-y-2">
+              <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[#0a1433]" /> NDA dua arah untuk data teknis & rencana investasi</li>
+              <li className="flex items-center gap-2"><Zap className="h-4 w-4 text-[#3366ff]" /> Respons strategis dalam 1 hari kerja</li>
             </ul>
           </div>
-          <ContactForm />
+          <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-end md:w-auto">
+            <a
+              href="https://wa.me/6287886863438"
+              className="flex w-full items-center gap-3 rounded-2xl border border-slate-200 bg-[#eef2ff] px-5 py-4 text-sm font-semibold text-[#0a1433] transition hover:border-[#0a1433] hover:bg-white sm:w-auto"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-[#0a1433] shadow-inner">
+                <Phone className="h-5 w-5" aria-hidden />
+              </span>
+              +6287886863438
+            </a>
+            <a
+              href="mailto:ceo@hydrosmart.pro"
+              className="flex w-full items-center gap-3 rounded-2xl border border-slate-200 bg-[#eef2ff] px-5 py-4 text-sm font-semibold text-[#0a1433] transition hover:border-[#3366ff] hover:bg-white sm:w-auto"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-[#3366ff] shadow-inner">
+                <Mail className="h-5 w-5" aria-hidden />
+              </span>
+              ceo@hydrosmart.pro
+            </a>
+          </div>
         </div>
       </section>
 
       <footer className="bg-white border-t border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-slate-600 grid md:grid-cols-2 gap-6">
-          <div>
-            <div className="flex items-center gap-3 font-semibold text-[#0a1433]">
-              <div className="relative h-20 w-20">
-                <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
-              </div>
+            <div className="relative h-30 w-30">
+              <Image src="/logo.svg" alt="HydroSmart logo" fill sizes="48px" className="object-contain" />
             </div>
-            <p className="mt-2 max-w-md text-[#0a1433]">Platform pendinginan cair dengan kecerdasan prediktif untuk pusat data — menjaga stabilitas termal, menekan energi, dan meningkatkan valuasi aset.</p>
-          </div>
           <div className="flex md:justify-end items-start gap-8">
             <div>
               <div className="font-semibold text-slate-800">Tautan</div>
