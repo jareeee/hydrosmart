@@ -116,7 +116,7 @@ export default function HydroSmartLanding() {
                 <span className="mt-3 font-medium text-[#0a1433]">Integrasi WCU, VFD, katup IoT</span>
               </div>
               <div className="flex flex-col items-center rounded-2xl bg-[#eef2ff] px-6 py-6 text-center shadow-sm">
-                <Bot className="w-6 h-6 text-[#0a1433]" aria-hidden />
+                <Bot className="w-6 h-6 text-[#3366ff]" aria-hidden />
                 <span className="mt-3 font-medium text-[#0a1433]">Analitik prediktif untuk penentuan debit</span>
               </div>
               <div className="flex flex-col items-center rounded-2xl bg-[#eef2ff] px-6 py-6 text-center shadow-sm">
@@ -159,12 +159,11 @@ export default function HydroSmartLanding() {
 
       <section id="cara-kerja" className="bg-white border-y border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-          <SectionHeader kicker="Cara Kerja" title="Arsitektur kendali tertutup" subtitle="Sensor, analitik, dan aktuasi bekerja serempak menjaga performa termal." />
+          <SectionHeader kicker="Cara Kerja" title="Sistem terintegrasi" subtitle="Sensor, analitik, dan aktuasi bekerja serempak menjaga performa termal." />
           <ol className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <Step no={1} icon={Activity} title="Monitor" desc="Agent membaca suhu, CPU/RAM, dan daya lalu mengirim telemetri terenkripsi ke API." />
-            <Step no={2} icon={Bot} title="Analitik Prediktif" desc="Model menghitung debit optimal per jalur berdasarkan tren beban & risiko termal." />
-            <Step no={3} icon={Network} title="Kontrol" desc="API mengatur WCU, VFD, dan katup IoT melalui MQTT/HTTP secara presisi." />
-            <Step no={4} icon={Lock} title="Umpan Balik" desc="Status perangkat dan metrik tervalidasi; alarm otomatis bila ada penyimpangan." />
+            <Step icon={Activity} title="Monitor" desc="Agent membaca suhu, CPU/RAM, dan daya lalu mengirim telemetri terenkripsi ke API." />
+            <Step icon={Bot} title="Analitik Prediktif" desc="Model menghitung debit optimal per jalur berdasarkan tren beban & risiko termal." />
+            <Step icon={Network} title="Kontrol" desc="API mengatur WCU, VFD, dan katup IoT melalui MQTT/HTTP secara presisi." />
           </ol>
         </div>
       </section>
@@ -188,12 +187,12 @@ export default function HydroSmartLanding() {
                 <div className="flex justify-center pl-2">
                   <div
                     className="inline-flex h-16 min-w-[4.5rem] items-end justify-end px-6 pb-3 text-sm font-semibold text-white shadow-md"
-                    style={{ backgroundColor: "#0a1433", clipPath: "polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)" }}
+                    style={{ backgroundColor: "#3366ff", clipPath: "polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)" }}
                   >
                     35%*
                   </div>
                 </div>
-                <div className="rounded-2xl border border-[#0a1433] bg-[#0a1433] px-6 py-5 text-white shadow-lg">
+                <div className="rounded-2xl border border-[#3366ff] bg-[#3366ff] px-6 py-5 text-white shadow-lg">
                   <div className="flex items-center gap-3">
                     <Droplets className="h-6 w-6 text-white" aria-hidden />
                     <div>
@@ -269,10 +268,6 @@ export default function HydroSmartLanding() {
           <div className="max-w-lg space-y-4">
             <h3 className="text-2xl font-bold text-[#0a1433]">Siap bahas roadmap pendinginan & investasi?</h3>
             <p className="text-slate-600">HydroSmart, menjadikan AI berkelanjutan tanpa mengorbankan air.</p>
-            <ul className="text-sm text-slate-700 space-y-2">
-              <li className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[#0a1433]" /> NDA dua arah untuk data teknis & rencana investasi</li>
-              <li className="flex items-center gap-2"><Zap className="h-4 w-4 text-[#3366ff]" /> Respons strategis dalam 1 hari kerja</li>
-            </ul>
           </div>
           <div className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-end md:w-auto">
             <a
