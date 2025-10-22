@@ -187,12 +187,12 @@ export default function HydroSmartLanding() {
                 <div className="flex justify-center pl-2">
                   <div
                     className="inline-flex h-16 min-w-[4.5rem] items-end justify-end px-6 pb-3 text-sm font-semibold text-white shadow-md"
-                    style={{ backgroundColor: "#3366ff", clipPath: "polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)" }}
+                    style={{ backgroundColor: "#0a1433", clipPath: "polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)" }}
                   >
                     35%*
                   </div>
                 </div>
-                <div className="rounded-2xl border border-[#3366ff] bg-[#3366ff] px-6 py-5 text-white shadow-lg">
+                <div className="rounded-2xl border border-[#0a1433] bg-[#0a1433] px-6 py-5 text-white shadow-lg">
                   <div className="flex items-center gap-3">
                     <Droplets className="h-6 w-6 text-white" aria-hidden />
                     <div>
@@ -218,12 +218,12 @@ export default function HydroSmartLanding() {
                 <div className="flex justify-center pl-2">
                   <div
                     className="inline-flex h-16 min-w-[4.5rem] items-end justify-end px-6 pb-3 text-sm font-semibold text-white shadow-md"
-                    style={{ backgroundColor: "#3366ff", clipPath: "polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)" }}
+                    style={{ backgroundColor: "#0a1433", clipPath: "polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)" }}
                   >
                     40%*
                   </div>
                 </div>
-                <div className="rounded-2xl border border-[#3366ff] bg-[#3366ff] px-6 py-5 text-white shadow-lg">
+                <div className="rounded-2xl border border-[#0a1433] bg-[#0a1433] px-6 py-5 text-white shadow-lg">
                   <div className="flex items-center gap-3">
                     <Zap className="h-6 w-6 text-white" aria-hidden />
                     <div>
@@ -241,10 +241,9 @@ export default function HydroSmartLanding() {
               <p className="mt-4 text-2xl font-bold leading-snug">12,2 Juta L/tahun</p>
               <p className="mt-1 text-sm text-slate-200">Air bersih yang dapat dialihkan.</p>
             </div>
-            <div className="rounded-3xl bg-[#3366ff] px-6 py-7 text-white shadow-xl">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#dbe4ff]">Efisiensi Biaya Operasional</p>
+            <div className="rounded-3xl bg-[#0a1433] px-6 py-7 text-white shadow-xl">
+              <p className="text-xs uppercase tracking-[0.3em] text-[#8fa4ff]">Efisiensi Biaya Operasional</p>
               <p className="mt-4 text-2xl font-bold leading-snug">Rp 4,9 Miliar / Tahun</p>
-              <p className="mt-1 text-sm text-slate-100">Hasil simulasi untuk 50 rak pendinginan cair.</p>
             </div>
             <p className="text-xs text-slate-500">Proyeksi pada skala besar untuk 50 rak data center.</p>
           </div>
