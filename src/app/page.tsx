@@ -160,11 +160,23 @@ export default function HydroSmartLanding() {
       <section id="cara-kerja" className="bg-white border-y border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
           <SectionHeader kicker="Cara Kerja" title="Sistem terintegrasi" subtitle="Sensor, analitik, dan aktuasi bekerja serempak menjaga performa termal." />
-          <ol className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <ol className="mt-8 grid gap-5 md:grid-cols-3">
             <Step icon={Activity} title="Monitor" desc="Agent membaca suhu, CPU/RAM, dan daya lalu mengirim telemetri terenkripsi ke API." />
             <Step icon={Bot} title="Analitik Prediktif" desc="Model menghitung debit optimal per jalur berdasarkan tren beban & risiko termal." />
             <Step icon={Network} title="Kontrol" desc="API mengatur WCU, VFD, dan katup IoT melalui MQTT/HTTP secara presisi." />
           </ol>
+          <div className="mt-10 flex justify-center">
+            <div className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-[#eef2ff] via-white to-[#cbd8ff] p-6 shadow-lg ring-1 ring-[#d6ddff]/70">
+              <div className="absolute inset-0 -z-10 bg-white/40 blur-3xl" aria-hidden />
+              <Image
+                src="/blueprint.png"
+                alt="Blueprint alur kerja sistem HydroSmart"
+                width={960}
+                height={540}
+                className="mx-auto w-full rounded-2xl border border-white/60 shadow-xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
