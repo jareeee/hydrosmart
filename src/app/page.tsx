@@ -167,9 +167,10 @@ export default function HydroSmartLanding() {
 
 			{/* ===== Hero ===== */}
 			<section className="relative overflow-hidden bg-[linear-gradient(to_bottom,#07112a_0%,#163a9a_35%,#3366ff_70%,#9ecbff_100%)]">
-				<div className="relative mx-auto max-w-7xl sm:px-6 lg:px-8 py-12 grid lg:grid-cols-2 gap-10 items-center min-h-[520px] md:min-h-[650px]">
-					<div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-						<h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
+				<div className="relative mx-auto max-w-7xl sm:px-6 lg:px-8 py-16 grid grid-cols-1 gap-y-8 items-center justify-center min-h-[520px] md:min-h-[650px]">
+					{/* teks + tombol — selalu center */}
+					<div className="flex flex-col items-center text-center px-4">
+						<h1 className="text-3xl lg:max-w-4xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
 							AI &amp; IoT Untuk Efisiensi Pendinginan Air Pada Chip AI
 						</h1>
 						<p className="mt-4 text-slate-200 text-base sm:text-lg max-w-xl">
@@ -185,12 +186,14 @@ export default function HydroSmartLanding() {
 							</a>
 						</div>
 					</div>
+
+					{/* gambar — selalu di bawah teks, lebar penuh tapi dibatasi */}
 					<Image
 						src="/jumbotron.gif"
 						alt="animation"
-						width={2500}
+						width={2000}
 						height={1500}
-						className="w-full max-w-5xl mx-auto"
+						className="w-full max-w-3xl mx-auto"
 					/>
 				</div>
 			</section>
