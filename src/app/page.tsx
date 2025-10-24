@@ -196,29 +196,29 @@ export default function HydroSmartLanding() {
 			>
 				<SectionHeader
 					kicker="Fitur"
-					title="Solusi yang Anda peroleh"
-					subtitle="Optimalkan operasional untuk keberlanjutan bisnis tanpa memangkas kualitas"
+					title="Solusi yang Anda Dapatkan"
+					subtitle="Optimalkan operasional secara berkelanjutan tanpa mengorbankan performa"
 				/>
 				<div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
 					<Feature
 						icon={Gauge}
 						title="Kontrol Debit Dinamis"
-						desc="Teknologi penyesuaian debit air berdasarkan beban server"
+						desc="Penyesuaian debit berbasis beban server"
 					/>
 					<Feature
 						icon={ValveIcon}
 						title="Katup per-Rak"
-						desc="Katup IoT membuka/menutup otomatis per-jalur agar distribusi air optimal."
+						desc="Katup IoT membuka/menutup otomatis per jalur untuk distribusi air yang optimal."
 					/>
 					<Feature
 						icon={Bot}
 						title="AI Terintegrasi"
-						desc="Prediksi load pada server untuk mengatur mekanisme katup"
+						desc="Model prediktif mengatur pembukaan katup berdasarkan proyeksi beban."
 					/>
 					<Feature
 						icon={LineChart}
 						title="Dashboard Real‑time"
-						desc="Grafik suhu, debit, alarm, dan historis untuk audit & optimasi."
+						desc="Grafik suhu, debit, alarm, dan riwayat untuk audit dan optimasi.."
 					/>
 				</div>
 			</section>
@@ -272,7 +272,7 @@ export default function HydroSmartLanding() {
 				<SectionHeader
 					kicker="Metrik"
 					title="Dampak dalam angka"
-					subtitle="Penurunan konsumsi harian pendinginan dengan membandingkan sistem pendingin konvensional (open-loop evaporative cooling)*"
+					subtitle="Perbandingan terhadap sistem pendingin konvensional (open-loop evaporative cooling)."
 				/>
 				<div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] text-center">
 					<div className="grid gap-8 md:grid-cols-2">
@@ -303,7 +303,7 @@ export default function HydroSmartLanding() {
 												"polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)",
 										}}
 									>
-										35%*
+										≈35%
 									</div>
 								</div>
 								<div className="rounded-2xl border border-[#0a1433] bg-[#0a1433] px-6 py-5 text-white shadow-lg">
@@ -347,7 +347,7 @@ export default function HydroSmartLanding() {
 												"polygon(30% 0%, 70% 0%, 70% 48%, 100% 48%, 50% 100%, 0% 48%, 30% 48%)",
 										}}
 									>
-										40%*
+										≈40%
 									</div>
 								</div>
 								<div className="rounded-2xl border border-[#0a1433] bg-[#0a1433] px-6 py-5 text-white shadow-lg">
@@ -370,10 +370,10 @@ export default function HydroSmartLanding() {
 								Penghematan Air
 							</p>
 							<p className="mt-4 text-2xl font-bold leading-snug">
-								12,2 Juta L/tahun
+								≈12,2 Juta L/tahun
 							</p>
 							<p className="mt-1 text-sm text-slate-200">
-								Air bersih yang dapat dialihkan.
+								Potensi pengalihan konsumsi air bersih.
 							</p>
 						</div>
 						<div className="rounded-3xl bg-[#0a1433] px-6 py-7 text-white shadow-xl">
@@ -381,11 +381,11 @@ export default function HydroSmartLanding() {
 								Efisiensi Biaya Operasional
 							</p>
 							<p className="mt-4 text-2xl font-bold leading-snug">
-								Rp 4,9 Miliar / Tahun
+								≈Rp 4,9 miliar/tahun
 							</p>
 						</div>
 						<p className="text-xs text-slate-500">
-							Proyeksi pada skala besar untuk 50 rak data center.
+							Proyeksi pada konfigurasi 50 rak data center.
 						</p>
 					</div>
 				</div>
@@ -403,7 +403,7 @@ export default function HydroSmartLanding() {
 					<SectionHeader
 						kicker="Teknologi"
 						title="Teknologi & Integrasi"
-						subtitle="Teknologi menyesuaikan dengan standar industri yang dapat di andalkan."
+						subtitle="Selaras dengan standar industri dan dapat diandalkan."
 					/>
 					<div className="mt-8 grid md:grid-cols-3 gap-5">
 						<StackCard
@@ -432,7 +432,7 @@ export default function HydroSmartLanding() {
 				<div className="rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 p-8 md:p-10 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
 					<div className="max-w-lg space-y-4">
 						<h3 className="text-2xl font-bold text-[#0a1433]">
-							Siap bahas roadmap pendinginan & investasi?
+							Tertarik membahas strategi pendinginan dan rencana investasi?
 						</h3>
 						<p className="text-slate-600">
 							HydroSmart, menjadikan AI berkelanjutan tanpa mengorbankan air.
