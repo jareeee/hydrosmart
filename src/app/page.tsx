@@ -177,23 +177,15 @@ export default function HydroSmartLanding() {
 							Melalui sensor suhu dan katup pintar, HydroSmart menyalurkan air
 							hanya ke rak server yang membutuhkan pendinginan secara real-time.
 						</p>
-						<div className="mt-6">
-							<a
-								href="#cara-kerja"
-								className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3.5 text-sm font-semibold text-[#3366ff] transition hover:bg-slate-100 sm:text-base shadow-lg"
-							>
-								Pelajari HydroSmart
-							</a>
-						</div>
 					</div>
 
 					{/* gambar — selalu di bawah teks, lebar penuh tapi dibatasi */}
 					<Image
 						src="/jumbotron.gif"
 						alt="animation"
-						width={2000}
+						width={2500}
 						height={1500}
-						className="w-full max-w-3xl mx-auto"
+						className="w-full max-w-5xl mx-auto"
 					/>
 				</div>
 			</section>
@@ -256,7 +248,7 @@ export default function HydroSmartLanding() {
 						/>
 					</ol>
 					<div className="mt-10 flex justify-center">
-						<div className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-[#eef2ff] via-white to-[#cbd8ff] p-6 shadow-lg ring-1 ring-[#d6ddff]/70">
+						<div className="relative w-full max-w-4xl overflow-hidden rounded-3xl ">
 							<div
 								className="absolute inset-0 -z-10 bg-white/40 blur-3xl"
 								aria-hidden
