@@ -248,7 +248,7 @@ export default function HydroSmartLanding() {
 						/>
 					</ol>
 					<div className="mt-10 flex justify-center">
-						<div className="relative w-full max-w-4xl overflow-hidden rounded-3xl ">
+						<div className="relative w-full max-w-4xl overflow-hidden">
 							<div
 								className="absolute inset-0 -z-10 bg-white/40 blur-3xl"
 								aria-hidden
@@ -258,7 +258,7 @@ export default function HydroSmartLanding() {
 								alt="Blueprint alur kerja sistem HydroSmart"
 								width={960}
 								height={540}
-								className="mx-auto w-full rounded-2xl border border-white/60 shadow-xl"
+								className="mx-auto w-full border border-white/60 shadow-xl"
 							/>
 						</div>
 					</div>
